@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: sk199-myfirst-api-server
-  namespace: skala-practice
+  name: sk071-myfirst-api-server
+  namespace: class-3
 spec:
   selector:
-    app: sk199-myfirst-api-server
+    app: sk071-myfirst-api-server
   ports:
     - name: http
       protocol: TCP

@@ -3,30 +3,30 @@ kind: Ingress
 metadata:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
-  name: sk199-myfirst-ingress
-  namespace: skala-practice
+  name: sk071-myfirst-ingress
+  namespace: class-3
 spec:
   ingressClassName: public-nginx
   rules:
-  - host: sk199-ingress.skala25a.project.skala-ai.com
+  - host: sk071-ingress.skala25a.project.skala-ai.com
     http:
       paths:
       - backend:
           service:
-            name: sk199-custom-jenkins
+            name: sk071-custom-jenkins
             port:
               number: 8080
         path: /jenkins
         pathType: Prefix
       - backend:
           service:
-            name: sk199-myfirst-api-server
+            name: sk071-myfirst-api-server
             port:
               number: 8080
         path: /
         pathType: Prefix
   tls:
   - hosts:
-    - 'sk199-ingress.skala25a.project.skala-ai.com'
-    secretName: sk199-ingress-project-tls-cert
+    - 'sk071-ingress.skala25a.project.skala-ai.com'
+    secretName: sk071-ingress-project-tls-cert
 
